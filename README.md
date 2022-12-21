@@ -2,6 +2,15 @@
 
 This project usese LSTM for sentiment Classification
 
+## Accuracy helper function
+
+```
+def getAccuracy(logits,labels):
+  predictions = torch.argmax(logits,dim=1)
+  acc = torch.sum(predictions == labels)/predictions.shape[0]
+  return acc.item()
+  
+```
 
 ## Downlaod dataset 
 
